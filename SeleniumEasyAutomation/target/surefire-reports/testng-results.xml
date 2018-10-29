@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="InputFormSuite" duration-ms="97130" started-at="2018-10-27T14:57:18Z" finished-at="2018-10-27T14:58:55Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="97130" started-at="2018-10-27T14:57:18Z" finished-at="2018-10-27T14:58:55Z">
+      <class name="com.SeleniumEasy.InputFormTest">
+        <test-method status="PASS" signature="suiteSetup()[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="suiteSetup" is-config="true" duration-ms="217" started-at="2018-10-27T20:27:18Z" finished-at="2018-10-27T20:27:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- suiteSetup -->
+        <test-method status="PASS" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="methodSetup" is-config="true" duration-ms="54419" started-at="2018-10-27T20:27:18Z" finished-at="2018-10-27T20:28:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.SeleniumEasy.InputFormTest.verifyBulletPoints_1stBox() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetup -->
+        <test-method status="PASS" signature="verifyBulletPoints_1stBox()[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="verifyBulletPoints_1stBox" duration-ms="9813" started-at="2018-10-27T20:28:13Z" finished-at="2018-10-27T20:28:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyBulletPoints_1stBox -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="teardown" is-config="true" duration-ms="2145" started-at="2018-10-27T20:28:22Z" finished-at="2018-10-27T20:28:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyBulletPoints_1stBox status=SUCCESS method=InputFormTest.verifyBulletPoints_1stBox()[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.SeleniumEasy.InputFormTest.verifyBulletPoints_1stBox() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="methodSetup" is-config="true" duration-ms="14452" started-at="2018-10-27T20:28:25Z" finished-at="2018-10-27T20:28:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.SeleniumEasy.InputFormTest.verify1stBlockEnterMessageDisplay() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetup -->
+        <test-method status="PASS" signature="verify1stBlockEnterMessageDisplay()[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="verify1stBlockEnterMessageDisplay" duration-ms="1459" started-at="2018-10-27T20:28:39Z" finished-at="2018-10-27T20:28:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify1stBlockEnterMessageDisplay -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="teardown" is-config="true" duration-ms="221" started-at="2018-10-27T20:28:41Z" finished-at="2018-10-27T20:28:41Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify1stBlockEnterMessageDisplay status=SUCCESS method=InputFormTest.verify1stBlockEnterMessageDisplay()[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.SeleniumEasy.InputFormTest.verify1stBlockEnterMessageDisplay() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="methodSetup(java.lang.reflect.Method)[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="methodSetup" is-config="true" duration-ms="13541" started-at="2018-10-27T20:28:41Z" finished-at="2018-10-27T20:28:54Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.SeleniumEasy.InputFormTest.verify2ndBlockSumTotalDisplay() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- methodSetup -->
+        <test-method status="PASS" signature="verify2ndBlockSumTotalDisplay()[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="verify2ndBlockSumTotalDisplay" duration-ms="826" started-at="2018-10-27T20:28:54Z" finished-at="2018-10-27T20:28:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify2ndBlockSumTotalDisplay -->
+        <test-method status="PASS" signature="teardown(org.testng.ITestResult, java.lang.reflect.Method)[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="teardown" is-config="true" duration-ms="239" started-at="2018-10-27T20:28:55Z" finished-at="2018-10-27T20:28:55Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verify2ndBlockSumTotalDisplay status=SUCCESS method=InputFormTest.verify2ndBlockSumTotalDisplay()[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df] output={null}]]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.SeleniumEasy.InputFormTest.verify2ndBlockSumTotalDisplay() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method status="PASS" signature="reportClose()[pri:0, instance:com.SeleniumEasy.InputFormTest@5a61f5df]" name="reportClose" is-config="true" duration-ms="578" started-at="2018-10-27T20:28:56Z" finished-at="2018-10-27T20:28:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reportClose -->
+      </class> <!-- com.SeleniumEasy.InputFormTest -->
+    </test> <!-- Test -->
+  </suite> <!-- InputFormSuite -->
+</testng-results>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [InputFormSuite]">
+  <listeners>
+    <listener class-name="reports.ExtentReporterNG"/>
+  </listeners>
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.SeleniumEasy.InputFormTest">
+        <methods>
+          <include name="verifyBulletPoints_1stBox"/>
+          <include name="teardown"/>
+          <include name="verify1stBlockEnterMessageDisplay"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- com.SeleniumEasy.InputFormTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [InputFormSuite] -->

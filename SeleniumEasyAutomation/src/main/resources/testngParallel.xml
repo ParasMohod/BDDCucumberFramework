@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="InputFormSuite" parallel = "tests">
+<listeners>
+	<listener class-name="reports.ExtentReporterNG"/>
+</listeners>
+  <test thread-count="1" name="SimpleFormTest1">
+    <classes>
+      <class name="com.SeleniumEasy.InputFormTest">
+      	<methods>
+      		<exclude name="verify1stBlockEnterMessageDisplay"/>
+      	</methods>
+      </class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="1" name="SimpleFormTest2">
+    <classes>
+      <class name="com.SeleniumEasy.InputFormTest">
+      	<methods>
+      		<exclude name="verifyBulletPoints_1stBox"/>
+      	</methods>
+      	</class>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- InputFormSuite -->
