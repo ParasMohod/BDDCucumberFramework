@@ -1,5 +1,8 @@
 package pageObjects.inputForms;
 
+import java.io.InputStream;
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 
 import com.relevantcodes.extentreports.ExtentTest;
@@ -8,11 +11,16 @@ import com.relevantcodes.extentreports.LogStatus;
 import suiteSetup.inputForms.Setup_ObjectRepository;
 import utilities.CommonFunctionalities;
 import utilities.FindElementMethods;
+import utilities.LoadObjectRepository;
 import utilities.wrapperedActions.ClickActions;
 import utilities.wrapperedActions.InputActions;
 
 public class SimpleFormPage extends FindElementMethods
 {
+	
+	private InputStream objectFile;
+	private Properties prop;
+	
 	private String repository_path = "D:\\NK\\Selenium Projects\\SeleniumEasyAutomation\\src\\main\\java\\Object Repository\\InputForm_SimpleForm_Constants.properties";
 	private String page_title_css;
 	private String block_1st_title_css;
@@ -36,21 +44,25 @@ public class SimpleFormPage extends FindElementMethods
 	{
 		this.driver = driver;
 		this.test = test;
-		Setup_ObjectRepository obj = new Setup_ObjectRepository(repository_path);
+		
+		LoadObjectRepository obj = new LoadObjectRepository(repository_path);
+		objectFile = obj.file;
+		prop = new Properties();
+		prop.load(objectFile);
+		
+		//Setup_ObjectRepository obj = new Setup_ObjectRepository(repository_path);
 		//obj.setVariables(repository_path);
-		page_title_css = obj.page_title_css;
-		block_1st_title_css = obj.block_1st_title_css;
-		block_1st_Show_button_xpath = obj.block_1st_Show_button_xpath;
-		page_title_text = obj.page_title_text;
-		block_1st_title_text = obj.block_1st_title_text;
-		block_1st_bullet_list_xpath = obj.block_1st_bullet_list_xpath;
-		block_1st_show_message_btn_xpath = obj.block_1st_show_message_btn_xpath;
-		block_1st_enter_msg_box_xpath = obj.block_1st_enter_msg_box_xpath;
-		block_1st_msg_display_label_xpath = obj.block_1st_msg_display_label_xpath;
-		block_2nd_enter_a_input_box_id = obj.block_2nd_enter_a_input_box_id;
-		block_2nd_enter_b_input_box_id = obj.block_2nd_enter_b_input_box_id;
-		block_2nd_get_total_btn_xpath =	obj.block_2nd_get_total_btn_xpath;
-		block_2nd_sum_display_label_id = obj.block_2nd_sum_display_label_id;
+		page_title_css = prop.getProperty("page_title_css");
+		block_1st_title_css = prop.getProperty("1st_block_title_css");
+		block_1st_Show_button_xpath = prop.getProperty("1st_block_Show_button_xpath");
+		block_1st_bullet_list_xpath = prop.getProperty("1st_block_bullet_list_xpath");
+		block_1st_show_message_btn_xpath = prop.getProperty("1st_block_show_message_btn_xpath");
+		block_1st_enter_msg_box_xpath = prop.getProperty("1st_block_enter_msg_box_xpath");
+		block_1st_msg_display_label_xpath = prop.getProperty("1st_block_msg_display_label_xpath");
+		block_2nd_enter_a_input_box_id = prop.getProperty("2nd_block_enter_a_input_box_id");
+		block_2nd_enter_b_input_box_id = prop.getProperty("2nd_block_enter_b_input_box_id");
+		block_2nd_get_total_btn_xpath = prop.getProperty("2nd_block_get_total_btn_xpath");
+		block_2nd_sum_display_label_id = prop.getProperty("2nd_block_sum_display_label_id");
 	}
 	
 	

@@ -115,36 +115,4 @@ public class InputFormTest extends BaseClassDef
 		test.log(LogStatus.INFO, "The calculated sum is correct.", "Calculation verification");
 	}
 	
-	@AfterMethod
-	public void teardown(ITestResult result, Method method) throws IOException
-	{
-		
-		if(result.getStatus() == ITestResult.FAILURE)
-        {
-			String testname = getTestname(method);
-        	test.log(LogStatus.FAIL, "Test Case Failed - "+testname+".");
-        	test.log(LogStatus.FAIL, "Test method Failed - "+result.getName());
-        	test.log(LogStatus.FAIL, "The failure reason -  "+result.getThrowable());
-        	
-        	getScreenshot(result.getName());
-        	String scrnshotPath = BaseClassDef.getScreenshot(result.getName());
-        	test.log(LogStatus.FAIL, test.addScreencast(scrnshotPath));
-        }
-        else if(result.getStatus() == ITestResult.SKIP)
-        {
-        	test.log(LogStatus.SKIP, "Test Case Skipped - "+result.getName());
-        }
-        else if(result.getStatus() == ITestResult.SUCCESS)
-        {
-        	String testname = getTestname(method);
-        	test.log(LogStatus.PASS, "Test Case Passed - "+testname+".");
-        }
-		for (String group : result.getMethod().getGroups())
-            test.assignCategory(group);
-		BaseClassDef.driver.close();
-		
-		extent.endTest(test);
-		extent.flush();
-	}
-	
 }

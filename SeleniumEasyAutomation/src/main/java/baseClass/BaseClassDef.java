@@ -17,13 +17,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-
 
 public class BaseClassDef 
 {
@@ -86,14 +87,19 @@ public class BaseClassDef
 	
 	public void setExtentReport()
 	{
-		extent = new ExtentReports("D:\\NK\\Selenium Projects\\SeleniumEasyAutomation\\reports\\"+"ExtentReportsTestNG.html", true);
+		extent = new ExtentReports("D:\\NK\\Selenium Projects\\SeleniumEasyAutomation\\reports\\"+"ExtentReportsTestNG.html", false);
+		extent.addSystemInfo("Operating System", "Windows 10");
+	    extent.addSystemInfo("Host Name", "SeleniumEasy");
+	    extent.addSystemInfo("Environment", "Staging");
+	    extent.addSystemInfo("User Name", "Nitish Karhe");
+
 	}
 	
 	public ExtentTest setExtentTest(String testmethod, String testcase)
 	{
 		//extent = new ExtentReports("D:\\NK\\Selenium Projects\\SeleniumEasyAutomation\\reports\\"+"ExtentReportsTestNG.html", true);
 		test=extent.startTest(testmethod);
-		test.log(LogStatus.INFO, testcase, "Test Case name");
+		test.log(LogStatus.INFO,testcase, "Test case name");
 		return test;
 	}
 	
@@ -108,10 +114,41 @@ public class BaseClassDef
     		return "";
 	}
 	
+	@AfterMethod
+	public void teardown(ITestResult result, Method method) throws IOException
+	{
+		
+		if(result.getStatus() == ITestResult.FAILURE)
+        {
+			String testname = getTestname(method);
+        	test.log(LogStatus.FAIL, "Test Case Failed - "+testname+".");
+        	test.log(LogStatus.FAIL, "Test method Failed - "+result.getName());
+        	test.log(LogStatus.FAIL, "The failure reason -  "+result.getThrowable());
+        	
+        	getScreenshot(result.getName());
+        	String scrnshotPath = BaseClassDef.getScreenshot(result.getName());
+        	test.log(LogStatus.FAIL, test.addScreencast(scrnshotPath));
+        }
+        else if(result.getStatus() == ITestResult.SKIP)
+        {
+        	test.log(LogStatus.SKIP, "Test Case Skipped - "+result.getName());
+        }
+        else if(result.getStatus() == ITestResult.SUCCESS)
+        {
+        	String testname = getTestname(method);
+        	test.log(LogStatus.PASS, "Test Case Passed - "+testname+".");
+        }
+		for (String group : result.getMethod().getGroups())
+            test.assignCategory(group);
+		BaseClassDef.driver.close();
+		extent.endTest(test);
+	}
+	
 	@AfterSuite
 	public void reportClose()
 	{
 		driver.quit();
+		extent.flush();
 		extent.close();
 	}
 }

@@ -13,12 +13,13 @@ import utilities.wrapperedActions.ClickActions;
 
 public class HomePage extends FindElementMethods
 {
-	public String repository_path = "D:\\NK\\Selenium Projects\\SeleniumEasyAutomation\\src\\main\\java\\Object Repository\\HomePage_Constants.properties";
-	public String inputForm_link_xpath;
-	public String simpleForm_link_xpath;
-	public WebDriver driver;
+	private String repository_path = "D:\\NK\\Selenium Projects\\SeleniumEasyAutomation\\src\\main\\java\\Object Repository\\HomePage_Constants.properties";
+	private String inputForm_link_xpath;
+	private String simpleForm_link_xpath;
+	private String select_dropdown_list_xpath;
+	private WebDriver driver;
 	private ExtentTest test;
-	public static Logger logger = LogManager.getLogger(HomePage.class.getName());
+	private static Logger logger = LogManager.getLogger(HomePage.class.getName());
 	
 	public HomePage(WebDriver driver, ExtentTest test) throws Exception
 	{
@@ -29,6 +30,7 @@ public class HomePage extends FindElementMethods
 		obj.setVariables(repository_path);
 		inputForm_link_xpath = obj.inputForm_link_xpath;
 		simpleForm_link_xpath = obj.simpleForm_link_xpath;
+		select_dropdown_list_xpath = obj.select_dropdown_list_xpath;
 	}
 	public void clickInputFormsLink() 
 	{
@@ -49,5 +51,11 @@ public class HomePage extends FindElementMethods
 	{
 		ClickActions.click(driver, "xpath", simpleForm_link_xpath);
 		test.log(LogStatus.INFO, "Simple form link is clicked.", "Step information");
+	}
+	
+	public void clickSelectDropDownListLink()
+	{
+		ClickActions.click(driver, "xpath", select_dropdown_list_xpath);
+		test.log(LogStatus.INFO, "Select dropdown list link is clicked.", "Step information");
 	}
 }
