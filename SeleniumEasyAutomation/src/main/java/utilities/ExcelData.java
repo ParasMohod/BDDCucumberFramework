@@ -11,8 +11,6 @@ import org.apache.poi.ss.util.NumberToTextConverter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import suiteSetup.inputForms.Setup_ObjectRepository;;
-
 public class ExcelData 
 {	
 	private String filePath;
@@ -20,15 +18,15 @@ public class ExcelData
 	private String TestColName;
 	public int key=0;
 	
-	public HashMap<String, String> getData(String testname, String repositoryPath) throws Exception
+	public ExcelData(String excelPath, String excelSheetName, String testcase_col_name)
 	{
-		Setup_ObjectRepository obj = new Setup_ObjectRepository(repositoryPath);
-		
-		//obj.setVariables(repositoryPath);
-		filePath = obj.ExcelPath;
-		wrkSheetName = obj.workbookSheetName;
-		TestColName = obj.TestCaseColumnName;
-		
+		this.filePath = excelPath;
+		this.wrkSheetName = excelSheetName;
+		this.TestColName = testcase_col_name;
+	}
+	
+	public HashMap<String, String> getData(String testname) throws Exception
+	{	
 		HashMap<String, String> data = new HashMap<String, String>();
 		ArrayList<String> ColNames = new ArrayList<String>();
 		FileInputStream file = new FileInputStream(filePath);

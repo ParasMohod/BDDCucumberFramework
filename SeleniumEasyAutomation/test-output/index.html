@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,12 +101,7 @@
                     <div class="method-list-content passed suite-InputFormSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.SeleniumEasy.InputFormTest" hash-for-method="verify1stBlockEnterMessageDisplay">verify1stBlockEnterMessageDisplay</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.SeleniumEasy.InputFormTest" hash-for-method="verifyBulletPoints_1stBox">verifyBulletPoints_1stBox</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-InputFormSuite" title="com.SeleniumEasy.DropdownListTest" hash-for-method="select_multiDropdown_ByVisibleText">select_multiDropdown_ByVisibleText</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-InputFormSuite -->
@@ -124,21 +119,14 @@
           <div class="suite-InputFormSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.SeleniumEasy.InputFormTest</span>
+              <span class="class-name">com.SeleniumEasy.DropdownListTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verify1stBlockEnterMessageDisplay">
-                  </a> <!-- verify1stBlockEnterMessageDisplay -->
-                  <span class="method-name">verify1stBlockEnterMessageDisplay</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyBulletPoints_1stBox">
-                  </a> <!-- verifyBulletPoints_1stBox -->
-                  <span class="method-name">verifyBulletPoints_1stBox</span>
+                  <a name="select_multiDropdown_ByVisibleText">
+                  </a> <!-- select_multiDropdown_ByVisibleText -->
+                  <span class="method-name">select_multiDropdown_ByVisibleText</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -153,12 +141,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;InputFormSuite&quot;&gt;
-  &lt;listeners&gt;
-    &lt;listener class-name=&quot;reports.ExtentReporterNG&quot;/&gt;
-  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.SeleniumEasy.InputFormTest&quot;/&gt;
+      &lt;class name=&quot;com.SeleniumEasy.DropdownListTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- InputFormSuite --&gt;
@@ -198,20 +183,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verify1stBlockEnterMessageDisplay')
-data.setCell(0, 2, 'com.SeleniumEasy.InputFormTest')
-data.setCell(0, 3, 10638);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyBulletPoints_1stBox')
-data.setCell(1, 2, 'com.SeleniumEasy.InputFormTest')
-data.setCell(1, 3, 924);
+data.setCell(0, 1, 'select_multiDropdown_ByVisibleText')
+data.setCell(0, 2, 'com.SeleniumEasy.DropdownListTest')
+data.setCell(0, 3, 2260);
 window.suiteTableData['InputFormSuite']= { tableData: data, tableDiv: 'times-div-InputFormSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 11 seconds</span>
+              <span class="suite-total-time">Total running time: 2 seconds</span>
               <div id="times-div-InputFormSuite">
               </div> <!-- times-div-InputFormSuite -->
             </div> <!-- times-div -->
@@ -226,9 +207,18 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-InputFormSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">2 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.SeleniumEasy.DropdownListTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">select_dropDown_ByVisibleText</span>
+                <br/>
+                <span class="ignored-method-name">select_dropDown_ByValue</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-InputFormSuite" class="panel">
@@ -237,22 +227,26 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.SeleniumEasy.InputFormTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.SeleniumEasy.DropdownListTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">Setup</span>
+                <span class="method-name">suiteSetup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">methodSetup(public void com.SeleniumEasy.DropdownListTest.select_multiDropdown_ByVisibleText() throws java.lang....)</span>
+                <span class="method-start">210 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verify1stBlockEnterMessageDisplay</span>
-                <span class="method-start">20860 ms</span>
+                <span class="method-name">select_multiDropdown_ByVisibleText</span>
+                <span class="method-start">8979 ms</span>
               </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">verifyBulletPoints_1stBox</span>
-                <span class="method-start">31502 ms</span>
-              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">teardown([TestResult name=select_multiDropdown_ByVisibleText status=SUCCESS method=DropdownListTest.select_mu...)</span>
+                <span class="method-start">11242 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
-                <span class="method-name">teardown</span>
-                <span class="method-start">32464 ms</span>
+                <span class="method-name">reportClose</span>
+                <span class="method-start">11791 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

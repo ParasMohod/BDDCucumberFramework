@@ -1,10 +1,8 @@
 package suiteSetup.inputForms;
 
-import java.io.IOException;
+
 import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Properties;
@@ -19,13 +17,16 @@ public class GetSimpleFormTestData
 	public String path = "D:\\NK\\Selenium Projects\\SeleniumEasyAutomation\\src\\main\\java\\Object Repository\\InputForm_SimpleForm_Constants.properties";
 	Properties prop;
 	HashMap<String, String> data;
-	public String testcase_name;
+	public String testcase_col_name;
 	public String activity_box_title;
 	public String enter_a;
 	public String enter_b;
 	public String page_title;
 	public String bullet_point_text;
 	public String message_box_input_text;
+	
+	private String excelPath;
+	private String excelSheetName;
 	
 	public void SetTestData(String testname) throws Exception
 	{
@@ -34,7 +35,7 @@ public class GetSimpleFormTestData
 		prop = new Properties();
 		prop.load(objectFile);
 		//Testdata Column names variables
-		testcase_name=testname;
+		testcase_col_name = prop.getProperty("TestCase_col_name");
 		activity_box_title = prop.getProperty("activity_box_title");
 		enter_a = prop.getProperty("enter_a");
 		enter_b = prop.getProperty("enter_b");
@@ -42,13 +43,17 @@ public class GetSimpleFormTestData
 		bullet_point_text = prop.getProperty("bullet_point_text");
 		message_box_input_text = prop.getProperty("message_box_input_text");
 		
-		ExcelData Exceobj = new ExcelData();
-		data = Exceobj.getData(testname, path);
+		//Set Excel sheet path and sheet name
+		excelPath = prop.getProperty("path");
+		excelSheetName = prop.getProperty("Sheet_name");
+		
+		ExcelData Exceobj = new ExcelData(excelPath, excelSheetName, testcase_col_name);
+		data = Exceobj.getData(testname);
 		
 		HashMap<String, String> testData = data;
 		Set<Entry<String, String>> pairs = testData.entrySet();
 		
-		for(Map.Entry<String, String> entry: pairs)
+		for(Entry<String, String> entry: pairs)
 		{
 			if(activity_box_title.equals(entry.getKey()))
 			{

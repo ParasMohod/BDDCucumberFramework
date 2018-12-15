@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.SeleniumEasy.InputFormsTest">
+      <class name="com.SeleniumEasy.DropdownListTest">
         <methods>
-          <include name="verifyBulletPoints_1stBox"/>
-          <include name="Setup"/>
+          <include name="suiteSetup"/>
+          <include name="reportClose"/>
+          <include name="select_dropDown_ByVisibleText"/>
+          <include name="methodSetup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- com.SeleniumEasy.InputFormsTest -->
+      </class> <!-- com.SeleniumEasy.DropdownListTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
