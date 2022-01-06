@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="InputFormSuite">
+<listeners>
+	<!--<listener class-name="reports.ExtentReporterNG"/>-->
+	<!--  <listener class-name="utilities.Listeners"/>-->
+</listeners>
+  <test name="Test">
+    <classes>
+      <class name="com.SeleniumEasy.DropdownListTest"/>
+      <class name="com.SeleniumEasy.InputFormTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- InputFormSuite -->

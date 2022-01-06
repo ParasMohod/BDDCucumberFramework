@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [InputFormSuite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.SeleniumEasy.DropdownListTest">
+        <methods>
+          <include name="select_multiDropdown_ByVisibleText"/>
+          <include name="suiteSetup"/>
+          <include name="reportClose"/>
+          <include name="teardown"/>
+          <include name="methodSetup"/>
+        </methods>
+      </class> <!-- com.SeleniumEasy.DropdownListTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [InputFormSuite] -->

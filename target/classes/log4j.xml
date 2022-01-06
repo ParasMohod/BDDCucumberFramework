@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="ERROR">
+<Properties>
+	<Property name="basePath">./logs</Property>
+</Properties>
+
+  <Appenders>
+     <RollingFile name="File" fileName="${basePath}/prints.log" filePattern="${basePath}/prints-%d{yyyy-MM-dd}-%i.log">
+	     <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+	     <SizeBasedTriggeringPolicy size="500"/>
+     </RollingFile>
+    <Console name="File" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+  </Appenders>
+  <Loggers>
+    <Logger name="com.SeleniumEasy.InputFormTest" level="error" additivity="false">
+      <AppenderRef ref="File"/>
+    </Logger>
+    <Root level="error">
+      <AppenderRef ref="File"/>
+    </Root>
+  </Loggers>
+</Configuration>

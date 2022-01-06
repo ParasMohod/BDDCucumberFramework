@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="InputFormSuite" parallel = "methods" thread-count="2">
+<!--<listeners>
+	<listener class-name="reports.ExtentReporterNG"/>
+</listeners>-->
+  <test name="SimpleFormTest1">
+    <classes>
+      <class name="com.SeleniumEasy.InputFormTest"/>
+      <class name="com.SeleniumEasy.DropdownListTest"/>
+    </classes>
+  </test> <!-- Test -->
+
+</suite> <!-- InputFormSuite -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" verbose="0" name="Failed suite [InputFormSuite]" parallel="methods">
+  <test name="SimpleFormTest1(failed)" parallel="methods">
+    <classes>
+      <class name="com.SeleniumEasy.DropdownListTest">
+        <methods>
+          <include name="select_multiDropdown_ByVisibleText"/>
+          <include name="suiteSetup"/>
+          <include name="select_dropDown_ByVisibleText"/>
+          <include name="teardown"/>
+          <include name="methodSetup"/>
+          <include name="select_dropDown_ByValue"/>
+        </methods>
+      </class> <!-- com.SeleniumEasy.DropdownListTest -->
+      <class name="com.SeleniumEasy.InputFormTest">
+        <methods>
+          <include name="verify2ndBlockSumTotalDisplay"/>
+          <include name="teardown"/>
+          <include name="methodSetup"/>
+          <include name="verifyBulletPoints_1stBox"/>
+          <include name="suiteSetup"/>
+          <include name="verify1stBlockEnterMessageDisplay"/>
+        </methods>
+      </class> <!-- com.SeleniumEasy.InputFormTest -->
+    </classes>
+  </test> <!-- SimpleFormTest1(failed) -->
+</suite> <!-- Failed suite [InputFormSuite] -->
